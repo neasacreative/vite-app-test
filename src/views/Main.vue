@@ -1,10 +1,7 @@
 <script setup>
 
 </script>
-
 <template>
-    <h1>this is landing page</h1>
-</template><template>
   <div class="main">
     <h1>Welcome to the Main Page</h1>
     <!-- Add more content as needed -->
