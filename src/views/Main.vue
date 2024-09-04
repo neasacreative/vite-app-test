@@ -1,6 +1,3 @@
-<script setup>
-
-</script>
 <template>
   <div class="main">
     <h1>Welcome to the Main Page</h1>
@@ -17,4 +14,8 @@ export default {
 
 <style scoped>
 /* Add any component-specific styles here */
+.main {
+  padding: 20px;
+  text-align: center;
+}
 </style>
