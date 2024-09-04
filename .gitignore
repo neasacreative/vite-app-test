@@ -1,4 +1,6 @@
 .vscode/*
 node_modules
 logs
-vscode
+.vscode
+.aider*
+dist

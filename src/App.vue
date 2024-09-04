@@ -1,19 +1,37 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <vewHeader class="sticky top-0"/>
+    <RouterView></RouterView>
+    <vewFooter />
+    
   </div>
-  <HelloWorld msg="Vite + Vue" />
   
 </template>
+
+<script>
+//import HelloWorld from './components/HelloWorld.vue'
+import Main from './views/Main.vue'
+import { RouterView, useRoute, useRouter } from 'vue-router';
+import vewHeader from './components/common-elements/vew-header.vue';
+import vewFooter from './components/common-elements/vew-footer.vue';
+import { watch } from 'vue';
+
+export default {
+  name : 'App',
+  components : {
+    vewHeader, vewFooter
+  },
+  setup() {
+    const route = useRoute()
+    const router = useRouter()
+
+    watch(()=>route.path)
+  }
+
+}
+</script>
 
 <style scoped>
 .logo {
